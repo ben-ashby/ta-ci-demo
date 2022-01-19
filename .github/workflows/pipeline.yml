@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install-dependencies
+        run: ls
+      - name: install-dependencies
         run: npm install ci
       - name: start-mongo
         run: npm run mongo:start
