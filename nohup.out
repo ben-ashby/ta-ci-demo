@@ -1,0 +1,256 @@
+Listening on port 3000
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m articles.ensureIndex({ slug: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+Listening on port 3000
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m articles.ensureIndex({ slug: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m } ] }) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m } ] }) {}  
+[0;36mMongoose:[0m users.insert({ updatedAt: { inspect: [36m[Function: inspect][39m }, createdAt: { inspect: [36m[Function: inspect][39m }, hash: [32m'e5e17b2dc1982a962f5381d21bd5d52c282e0c73f3685506ce504e6b0c200d578313f7a3069447044f058b4fc4dd545839ba5ba914a4e77db10ab689e18769b0938f86c8cd20426f656d8afa7e7648a9d0f3f7ecdfc38437816e673114eb948bd2385d1d0bc285d68397a9de0e838b36c80b325efa9051df5710f8ed49d32815249fb0482d1f56e8567eae852ce4e9f41a1daa6fa17640bda34a2b9b0ea8f8ee73ef4dc16bfc93ed20ed882e370ead6effb93f46580785ae89be50ed7f81bab3905cd6b13995e2500697593869ebca12662475299110ff13de3fc0b8ca7bcc6eef97fda9cb9f0e75218816f9ea090f8f467ab80e16c4caffb6dcf54ec7561f9a3588164aa6d934390cc24f3ef2d8b3367b3c3c519bf3f225016ef7af65bc893597b663aaf2fe6de0a1c5738c7d53b967e859869c94aa2d9740e91cf50265ba9fe051a43fb20ef31285917a80140461f3f7317f9203509c590c56404f89fe7b8375b6c28dabdd0f686afe3ff9ef1d57f8306e20abc3e1fdb8a67eac890907a3e5e0f19d719c05d4079a22818e65cfab8d1c201aa7e271afcecea6c166c0bac95cfeab6c579fc78bf6fafbb26f9a63db8ed2d9e63abd90508d8417c4a756cb0931a9dab09ec5fdc2182d80a7e4b55bc394934bd1e2c16bde27d810a9716a3090da8d57d625702111519dcc76116af18e98300c2909a38ae3cd43a192282006ba08'[39m, salt: [32m'04fb03443867538aaddc56b9f2a18793'[39m, email: [32m'john@jacob.com'[39m, username: [32m'johnjacob'[39m, _id: { inspect: [36m[Function: inspect][39m }, following: [], favorites: [], __v: [33m0[39m})   
+[0mPOST /api/users [32m200 [0m101.794 ms - 270[0m
+[0;36mMongoose:[0m users.findOne({ email: [32m'john@jacob.com'[39m }) { fields: [90mundefined[39m }  
+[0mPOST /api/users/login [32m200 [0m34.868 ms - 270[0m
+[0;36mMongoose:[0m users.findOne({ email: [32m'john@jacob.com'[39m }) { fields: [90mundefined[39m }  
+[0mPOST /api/users/login [32m200 [0m32.484 ms - 270[0m
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+(node:2579) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[0mGET /api/user [32m200 [0m3.873 ms - 270[0m
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } } }  
+[0mPUT /api/user [32m200 [0m5.014 ms - 270[0m
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ author: { [32m'$in'[39m: [] } }) { limit: [33m20[39m, skip: [33m0[39m, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ author: { [32m'$in'[39m: [] } }) {}  
+[0mGET /api/articles/feed [32m200 [0m3.758 ms - 33[0m
+[0;36mMongoose:[0m articles.find({}) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({}) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles [32m200 [0m3.501 ms - 33[0m
+[0;36mMongoose:[0m articles.find({}) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({}) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles [32m200 [0m3.281 ms - 33[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ author: { inspect: [36m[Function: inspect][39m } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ author: { inspect: [36m[Function: inspect][39m } }) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles?author=johnjacob [32m200 [0m3.575 ms - 33[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ author: { inspect: [36m[Function: inspect][39m } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ author: { inspect: [36m[Function: inspect][39m } }) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles?author=johnjacob [32m200 [0m4.214 ms - 33[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'jane'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ _id: { [32m'$in'[39m: [] } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ _id: { [32m'$in'[39m: [] } }) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles?favorited=jane [32m200 [0m3.443 ms - 33[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'jane'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ _id: { [32m'$in'[39m: [] } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ _id: { [32m'$in'[39m: [] } }) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles?favorited=jane [32m200 [0m3.362 ms - 33[0m
+[0;36mMongoose:[0m articles.find({ tagList: { [32m'$in'[39m: [ [32m'dragons'[39m ] } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ tagList: { [32m'$in'[39m: [ [32m'dragons'[39m ] } }) {}  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles?tag=dragons [32m200 [0m3.305 ms - 33[0m
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ [32m'$and'[39m: [ { slug: [32m'how-to-train-your-dragon-x5k96q'[39m } ] }) {}  
+[0;36mMongoose:[0m articles.insert({ updatedAt: { inspect: [36m[Function: inspect][39m }, createdAt: { inspect: [36m[Function: inspect][39m }, slug: [32m'how-to-train-your-dragon-x5k96q'[39m, author: { inspect: [36m[Function: inspect][39m }, title: [32m'How to train your dragon'[39m, description: [32m'Ever wonder how?'[39m, body: [32m'Very carefully.'[39m, _id: { inspect: [36m[Function: inspect][39m }, tagList: [ [32m'dragons'[39m, [32m'training'[39m ], comments: [], favoritesCount: [33m0[39m, __v: [33m0[39m})   
+model {
+  '$__': InternalCache {
+    strictMode: true,
+    selected: undefined,
+    shardval: undefined,
+    saveError: undefined,
+    validationError: undefined,
+    adhocPaths: undefined,
+    removing: undefined,
+    inserting: undefined,
+    version: undefined,
+    getters: {},
+    _id: undefined,
+    populate: undefined,
+    populated: undefined,
+    wasPopulated: true,
+    scope: undefined,
+    activePaths: StateMachine {
+      paths: [Object],
+      states: [Object],
+      stateNames: [Array]
+    },
+    ownerDocument: undefined,
+    fullPath: undefined,
+    emitter: EventEmitter {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: 0,
+      [Symbol(kCapture)]: false
+    }
+  },
+  isNew: false,
+  errors: undefined,
+  _doc: {
+    favorites: [],
+    following: [],
+    __v: 0,
+    username: 'johnjacob',
+    email: 'john@jacob.com',
+    salt: '04fb03443867538aaddc56b9f2a18793',
+    hash: 'e5e17b2dc1982a962f5381d21bd5d52c282e0c73f3685506ce504e6b0c200d578313f7a3069447044f058b4fc4dd545839ba5ba914a4e77db10ab689e18769b0938f86c8cd20426f656d8afa7e7648a9d0f3f7ecdfc38437816e673114eb948bd2385d1d0bc285d68397a9de0e838b36c80b325efa9051df5710f8ed49d32815249fb0482d1f56e8567eae852ce4e9f41a1daa6fa17640bda34a2b9b0ea8f8ee73ef4dc16bfc93ed20ed882e370ead6effb93f46580785ae89be50ed7f81bab3905cd6b13995e2500697593869ebca12662475299110ff13de3fc0b8ca7bcc6eef97fda9cb9f0e75218816f9ea090f8f467ab80e16c4caffb6dcf54ec7561f9a3588164aa6d934390cc24f3ef2d8b3367b3c3c519bf3f225016ef7af65bc893597b663aaf2fe6de0a1c5738c7d53b967e859869c94aa2d9740e91cf50265ba9fe051a43fb20ef31285917a80140461f3f7317f9203509c590c56404f89fe7b8375b6c28dabdd0f686afe3ff9ef1d57f8306e20abc3e1fdb8a67eac890907a3e5e0f19d719c05d4079a22818e65cfab8d1c201aa7e271afcecea6c166c0bac95cfeab6c579fc78bf6fafbb26f9a63db8ed2d9e63abd90508d8417c4a756cb0931a9dab09ec5fdc2182d80a7e4b55bc394934bd1e2c16bde27d810a9716a3090da8d57d625702111519dcc76116af18e98300c2909a38ae3cd43a192282006ba08',
+    createdAt: 2022-01-19T20:00:53.372Z,
+    updatedAt: 2022-01-19T20:00:53.521Z,
+    _id: ObjectID { _bsontype: 'ObjectID', id: 'aèmõÆ\x9Aâ\x13\n\x94Ý\x90' }
+  },
+  '$__original_save': [Function (anonymous)] { numAsyncPres: 1 },
+  save: [Function: wrappedPointCut],
+  _pres: { '$__original_save': [ [Function], [Function], [Function] ] },
+  _posts: { '$__original_save': [] }
+}
+[0mPOST /api/articles [32m200 [0m8.128 ms - 415[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles/how-to-train-your-dragon-x5k96q [32m200 [0m5.677 ms - 415[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ [32m'$and'[39m: [ { slug: [32m'how-to-train-your-dragon-x5k96q'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m articles.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$set'[39m: { body: [32m'With two hands'[39m, updatedAt: { inspect: [36m[Function: inspect][39m } }}  
+[0mPUT /api/articles/how-to-train-your-dragon-x5k96q [32m200 [0m5.380 ms - 414[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$pushAll'[39m: { favorites: [ { inspect: [36m[Function: inspect][39m } ] }, [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } }, [32m'$inc'[39m: { __v: [33m1[39m }}  
+MongoError: Unknown modifier: $pushAll. Expected a valid update modifier or pipeline-style update specified as an array
+    at Function.MongoError.create (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/utils.js:114:22)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/collection.js:1008:67
+    at commandCallback (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:1142:9)
+    at Callbacks.emit (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+    at Connection.messageHandler (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+    at Socket.<anonymous> (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at Socket.Readable.push (internal/streams/readable.js:204:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+[0mPOST /api/articles/how-to-train-your-dragon-x5k96q/favorite [31m500 [0m6.954 ms - 434[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.update({ _id: { inspect: [36m[Function: inspect][39m }, __v: [33m0[39m }) { [32m'$pullAll'[39m: { favorites: [ { inspect: [36m[Function: inspect][39m } ] }, [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } }, [32m'$inc'[39m: { __v: [33m1[39m }}  
+[0;36mMongoose:[0m users.count({ favorites: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) {}  
+[0;36mMongoose:[0m articles.count({ [32m'$and'[39m: [ { slug: [32m'how-to-train-your-dragon-x5k96q'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m articles.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } } }  
+[0mDELETE /api/articles/how-to-train-your-dragon-x5k96q/favorite [32m200 [0m7.967 ms - 414[0m
+[0;36mMongoose:[0m articles.find({}) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({}) {}  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0mGET /api/articles [32m200 [0m3.087 ms - 435[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ author: { inspect: [36m[Function: inspect][39m } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ author: { inspect: [36m[Function: inspect][39m } }) {}  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0mGET /api/articles?author=johnjacob [32m200 [0m4.054 ms - 435[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'jane'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.find({ _id: { [32m'$in'[39m: [] } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ _id: { [32m'$in'[39m: [] } }) {}  
+[0mGET /api/articles?favorited=jane [32m200 [0m2.628 ms - 33[0m
+[0;36mMongoose:[0m articles.find({ tagList: { [32m'$in'[39m: [ [32m'dragons'[39m ] } }) { limit: [33m20[39m, skip: [33m0[39m, sort: { createdAt: [33m-1[39m }, fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.count({ tagList: { [32m'$in'[39m: [ [32m'dragons'[39m ] } }) {}  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0mGET /api/articles?tag=dragons [32m200 [0m3.146 ms - 435[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0mGET /api/articles/how-to-train-your-dragon-x5k96q [32m200 [0m3.711 ms - 414[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/articles/how-to-train-your-dragon-x5k96q/comments [32m200 [0m4.468 ms - 15[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m comments.insert({ updatedAt: { inspect: [36m[Function: inspect][39m }, createdAt: { inspect: [36m[Function: inspect][39m }, author: { inspect: [36m[Function: inspect][39m }, article: { inspect: [36m[Function: inspect][39m }, body: [32m'Thank you so much!'[39m, _id: { inspect: [36m[Function: inspect][39m }, __v: [33m0[39m})   
+[0;36mMongoose:[0m articles.count({ [32m'$and'[39m: [ { slug: [32m'how-to-train-your-dragon-x5k96q'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m articles.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$pushAll'[39m: { comments: [ { inspect: [36m[Function: inspect][39m } ] }, [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } }, [32m'$inc'[39m: { __v: [33m1[39m }}  
+MongoError: Unknown modifier: $pushAll. Expected a valid update modifier or pipeline-style update specified as an array
+    at Function.MongoError.create (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/utils.js:114:22)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/collection.js:1008:67
+    at commandCallback (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:1142:9)
+    at Callbacks.emit (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+    at Connection.messageHandler (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+    at Socket.<anonymous> (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at Socket.Readable.push (internal/streams/readable.js:204:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+[0mPOST /api/articles/how-to-train-your-dragon-x5k96q/comments [31m500 [0m45.098 ms - 434[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+CastError: Cast to ObjectId failed for value "1" at path "_id"
+    at new CastError (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/error/cast.js:19:11)
+    at ObjectId.cast (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/schema/objectid.js:147:13)
+    at ObjectId.castForQuery (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/schema/objectid.js:187:15)
+    at cast (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/cast.js:174:32)
+    at Query.cast (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/query.js:2570:10)
+    at Query.findOne (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/query.js:1239:10)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/query.js:2164:21
+    at new Promise.ES6 (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/promise.js:45:3)
+    at Query.exec (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/query.js:2157:10)
+    at Query.then (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongoose/lib/query.js:2187:15)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/routes/api/articles.js:22:24
+    at paramCallback (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/express/lib/router/index.js:404:7)
+    at param (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/express/lib/router/index.js:384:5)
+    at paramCallback (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/express/lib/router/index.js:401:21)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/routes/api/articles.js:17:14
+    at newTickHandler (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mpromise/lib/promise.js:234:18)
+[0mDELETE /api/articles/how-to-train-your-dragon-x5k96q/comments/1 [31m500 [0m3.154 ms - 220[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0mGET /api/profiles/johnjacob [32m200 [0m2.820 ms - 122[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.update({ _id: { inspect: [36m[Function: inspect][39m } }) { [32m'$pushAll'[39m: { following: [ { inspect: [36m[Function: inspect][39m } ] }, [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } }, [32m'$inc'[39m: { __v: [33m1[39m }}  
+MongoError: Unknown modifier: $pushAll. Expected a valid update modifier or pipeline-style update specified as an array
+    at Function.MongoError.create (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/utils.js:114:22)
+    at /mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb/lib/collection.js:1008:67
+    at commandCallback (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:1142:9)
+    at Callbacks.emit (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+    at Connection.messageHandler (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+    at Socket.<anonymous> (/mnt/c/Users/benja/Documents/Work/TA/ta-ci-demo/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at Socket.Readable.push (internal/streams/readable.js:204:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+[0mPOST /api/profiles/johnjacob/follow [31m500 [0m4.982 ms - 434[0m
+[0;36mMongoose:[0m users.findOne({ username: [32m'johnjacob'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { username: [32m'johnjacob'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.count({ [32m'$and'[39m: [ { email: [32m'john@jacob.com'[39m }, { _id: { [32m'$ne'[39m: { inspect: [36m[Function: inspect][39m } } } ]}) {}  
+[0;36mMongoose:[0m users.update({ _id: { inspect: [36m[Function: inspect][39m }, __v: [33m1[39m }) { [32m'$pullAll'[39m: { following: [ { inspect: [36m[Function: inspect][39m } ] }, [32m'$set'[39m: { updatedAt: { inspect: [36m[Function: inspect][39m } }, [32m'$inc'[39m: { __v: [33m1[39m }}  
+[0mDELETE /api/profiles/johnjacob/follow [32m200 [0m4.177 ms - 122[0m
+[0;36mMongoose:[0m articles.distinct([32m'tagList'[39m) {} {} 
+[0mGET /api/tags [32m200 [0m1.817 ms - 31[0m
+[0;36mMongoose:[0m articles.findOne({ slug: [32m'how-to-train-your-dragon-x5k96q'[39m }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.find({ _id: { [32m'$in'[39m: [ { inspect: [36m[Function: inspect][39m } ] }}) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m users.findOne({ _id: { inspect: [36m[Function: inspect][39m } }) { fields: [90mundefined[39m }  
+[0;36mMongoose:[0m articles.remove({ _id: { inspect: [36m[Function: inspect][39m } }) {}  
+[0mDELETE /api/articles/how-to-train-your-dragon-x5k96q [32m204 [0m4.707 ms - -[0m
