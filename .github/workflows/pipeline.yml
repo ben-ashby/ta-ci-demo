@@ -15,11 +15,10 @@ jobs:
       - name: install-dependencies
         run: npm install ci
 
-      - name: start-mongo
-        run: npm run mongo:start
-
-      - name: start server
-        run: npm run ci-start
+      - name: start-server
+        run: |
+          npm run mongo:start
+          npm run ci-start
 
       - name: run-tests
         run: npm run test
