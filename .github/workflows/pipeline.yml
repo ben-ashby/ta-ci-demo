@@ -5,15 +5,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install-dependencies
-        run: ls
+      - uses: actions/checkout@master
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
       - name: install-dependencies
         run: npm install ci
+
       - name: start-mongo
         run: npm run mongo:start
+
       - name: start server
         run: npm run ci-start
+
       - name: run-tests
         run: npm run test
+
       - name: pack
         run: npm pack
