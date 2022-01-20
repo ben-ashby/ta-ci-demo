@@ -15,13 +15,8 @@ jobs:
       - name: install-dependencies
         run: npm install ci
 
-      - name: start-server
-        run: |
-          npm run mongo:start
-          npm run start-ci
-
       - name: run-tests
-        run: npm run test
+        run: npm run unit-tests
 
-      - name: pack
+      - name: package
         run: npm pack

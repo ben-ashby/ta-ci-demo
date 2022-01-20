@@ -1,0 +1,4 @@
+Listening on port 3000
+[0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m articles.ensureIndex({ slug: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  
+[0;36mMongoose:[0m users.ensureIndex({ email: [33m1[39m }) { unique: [33mtrue[39m, background: [33mtrue[39m }  

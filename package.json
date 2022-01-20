@@ -9,6 +9,7 @@
     "dev": "nodemon ./app.js",
     "start-ci": "forever start ./app.js",
     "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
+    "unit-tests": "jest tests/unit --coverage",
     "stop": "killall node",
     "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo"
   },
@@ -36,7 +37,15 @@
     "request": "2.69.0",
     "slug": "0.9.1",
     "underscore": "1.8.3",
-    "forever": "4.0.2"
+    "forever": "4.0.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "jest": "^25.1.0",
+    "jest-junit": "^10.0.0",
+    "mockingoose": "^2.13.2",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "newman": "^3.8.2",
