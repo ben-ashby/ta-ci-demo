@@ -18,7 +18,7 @@ jobs:
       - name: start-server
         run: |
           npm run mongo:start
-          npm run ci-start
+          npm run dev
 
       - name: run-tests
         run: npm run test
