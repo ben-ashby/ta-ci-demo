@@ -1,8 +1,8 @@
 ---
-name: sample-app-ci
+name: ta-ci-example
 on: push
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -14,9 +14,9 @@ jobs:
 
       - name: install-dependencies
         run: npm install ci
-
+      
       - name: run-tests
         run: npm run unit-tests
-
+      
       - name: package
         run: npm pack
